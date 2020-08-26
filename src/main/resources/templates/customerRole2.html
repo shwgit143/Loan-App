@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+<table>
+<tr>
+<th>id</th>
+<th>name</th>
+<th>job type</th>
+<th>loan amount</th>
+<th>interest rate</th>
+<th>status</td>
+</tr>
+
+<tr th:each="customer, iStat : ${customerRole2}" >
+    <td th:text="${customer.id}" />
+    <td th:text="${customer.customerName}" />
+    <td th:text="${customer.jobType}" />
+    <td th:text="${customer.loanAmount}" />
+    <td th:text="${customer.interestRate}" />
+    <td th:text="${customer.status}" />
+    </br>
+</tr>

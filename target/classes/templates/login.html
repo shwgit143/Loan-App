@@ -1,0 +1,11 @@
+
+<form action="#" th:action="@{/login}" th:object="${user}" method="post">
+   <!--  <label for="name">Customer Id</label> -->
+    <input type="text" th:field="*{id}" id="id" placeholder="id">
+    <br>
+    <!-- <label for="name">Customer Name</label> -->
+    <input type="password" th:field="*{password}" id="password" placeholder="password">
+    <br>
+    <br>
+    <input type="submit" value="Login">   
+</form>

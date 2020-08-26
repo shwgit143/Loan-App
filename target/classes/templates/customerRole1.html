@@ -1,0 +1,24 @@
+
+<form action="#" th:action="@{/addCustomerData}" th:object="${customerRole1}" method="post">
+   <!--  <label for="name">Customer Id</label> -->
+    <input type="text" th:field="*{id}" id="id" placeholder="id">
+    <td th:if="${#fields.hasErrors('id')}" th:errors="*{id}">Name Error</td>
+    <br>
+    <!-- <label for="name">Customer Name</label> -->
+    <input type="text" th:field="*{customerName}" id="customerName" placeholder="customerName">
+    <td th:if="${#fields.hasErrors('customerName')}" th:errors="*{customerName}">Name Error</td>
+    <br>
+    <!-- <label for="name">Job Type</label> -->
+    <input type="text" th:field="*{jobType}" id="jobType" placeholder="jobType">
+    <td th:if="${#fields.hasErrors('jobType')}" th:errors="*{jobType}">Name Error</td>
+    <br>
+    <!-- <label for="name">Loan Amount</label> -->
+    <input type="text" th:field="*{loanAmount}" id="loanAmount" placeholder="loanAmount">
+    <td th:if="${#fields.hasErrors('loanAmount')}" th:errors="*{loanAmount}">Name Error</td>
+    <br>
+    <!-- <label for="name">Interest Rate</label> -->
+    <input type="text" th:field="*{interestRate}" id="interestRate" placeholder="interestRate">
+    <td th:if="${#fields.hasErrors('interestRate')}" th:errors="*{interestRate}">Name Error</td>
+    <br>
+    <input type="submit" value="Add Customer">   
+</form>
